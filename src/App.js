@@ -11,7 +11,7 @@ export default function App() {
       <Route exact path='/' component={Header} />
 
       <Route exact path='/' component={WelcomePage} />
-
+      <h3>Character Info:</h3>
       <CharacterList />
 
       <Route exact path='/charectors' component={CharacterList} />
