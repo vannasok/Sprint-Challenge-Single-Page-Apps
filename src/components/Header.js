@@ -1,18 +1,16 @@
 import React from 'react';
-import Search from './Search';
+import SearchForm from './SearchForm';
 
 export default function Header() {
   return (
     <header className='ui centered'>
       <h1 className='ui center'>Rick &amp; Morty Fan Page</h1>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Charecter</li>
-          <li>Location</li>
-        </ul>
-      </nav>
-      <Search />
+      <a class='active' href='#home'>
+        Home
+      </a>
+      <a href='#about'>About</a>
+      <a href='#contact'>Contact</a>
+      <SearchForm />
     </header>
   );
 }
