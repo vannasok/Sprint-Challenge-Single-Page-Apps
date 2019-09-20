@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CharacterCard from './CharacterCard';
-import { Container, Row } from 'reactstrap';
+import styled from 'styled-components';
 
 const CharacterList = props => {
   // TODO: Add useState to track data from useEffect
@@ -23,20 +23,18 @@ const CharacterList = props => {
   }, []);
 
   return (
-    <Container>
-      <Row>
-        {char.map(ele => {
-          return (
-            <CharacterCard
-              key={ele.id}
-              name={ele.name}
-              status={ele.status}
-              species={ele.species}
-            />
-          );
-        })}
-      </Row>
-    </Container>
+    <div className='char-card'>
+      {char.map(ele => {
+        return (
+          <CharacterCard
+            key={ele.id}
+            name={ele.name}
+            status={ele.status}
+            species={ele.species}
+          />
+        );
+      })}
+    </div>
   );
 };
 export default CharacterList;

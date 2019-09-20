@@ -8,10 +8,12 @@ import LocationLists from './components/LocationsList';
 export default function App() {
   return (
     <main>
-      <Header />
-      <CharacterList />
+      <Route exact path='/' component={Header} />
 
       <Route exact path='/' component={WelcomePage} />
+
+      <CharacterList />
+
       <Route exact path='/charectors' component={CharacterList} />
       <Route exact path='/location' component={LocationLists} />
     </main>

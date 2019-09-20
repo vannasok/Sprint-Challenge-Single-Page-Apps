@@ -8,14 +8,20 @@ const Card = styled.div`
   width: 30%;
   border-radius: 20px;
 `;
+const Showcase = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 const CharacterCard = props => {
   return (
-    <Card>
-      <p>Name: {props.name}</p>
-      <p>Status: {props.status}</p>
-      <p>species: {props.species}</p>
-    </Card>
+    <Showcase>
+      <Card>
+        <p>Name: {props.name}</p>
+        <p>Status: {props.status}</p>
+        <p>species: {props.species}</p>
+      </Card>
+    </Showcase>
   );
 };
 export default CharacterCard;
