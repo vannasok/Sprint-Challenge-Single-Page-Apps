@@ -4,6 +4,7 @@ import WelcomePage from './components/WelcomePage';
 import { Route } from 'react-router-dom';
 import CharacterList from './components/CharacterList.js';
 import LocationLists from './components/LocationsList';
+import LocationsList from './components/LocationsList';
 
 export default function App() {
   return (
@@ -14,8 +15,13 @@ export default function App() {
       <h3>Character Info:</h3>
       <CharacterList />
 
-      <Route exact path='/charectors' component={CharacterList} />
-      <Route exact path='/location' component={LocationLists} />
+      <Route
+        exact
+        path='/charectors'
+        render={props => <CharacterList {...props} />}
+      />
+      <Route exact path='/location' component={LocationsList} />
+      <LocationLists />
     </main>
   );
 }

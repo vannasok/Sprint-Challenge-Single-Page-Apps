@@ -15,13 +15,11 @@ const Showcase = styled.div`
 
 const CharacterCard = props => {
   return (
-    <Showcase>
-      <Card>
-        <p>Name: {props.name}</p>
-        <p>Status: {props.status}</p>
-        <p>species: {props.species}</p>
-      </Card>
-    </Showcase>
+    <Card>
+      <p>Name: {props.name}</p>
+      <p>Status: {props.status}</p>
+      <p>species: {props.species}</p>
+    </Card>
   );
 };
 export default CharacterCard;
