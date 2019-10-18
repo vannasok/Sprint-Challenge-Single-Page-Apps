@@ -1,11 +1,27 @@
-import React from "react";
-import Header from "./components/Header.js";
-
+import React from 'react';
+import Header from './components/Header.js';
+import WelcomePage from './components/WelcomePage';
+import { Route } from 'react-router-dom';
+import CharacterList from './components/CharacterList.js';
+import LocationLists from './components/LocationsList';
+import LocationsList from './components/LocationsList';
 
 export default function App() {
   return (
     <main>
-      <Header />
+      <Route exact path='/' component={Header} />
+
+      <Route exact path='/' component={WelcomePage} />
+      <h3>Character Info:</h3>
+      <CharacterList />
+
+      <Route
+        exact
+        path='/charectors'
+        render={props => <CharacterList {...props} />}
+      />
+      <Route exact path='/location' component={LocationsList} />
+      <LocationLists />
     </main>
   );
 }
